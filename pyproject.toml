@@ -1,0 +1,8 @@
+[tool.poetry]
+name = "botomy-python-starter"
+version = "0.1.0"
+description = "A Python project starter for Botomy"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+# ...existing dependencies...
