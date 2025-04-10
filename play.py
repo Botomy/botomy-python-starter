@@ -1,6 +1,8 @@
 from models import LevelData, Move, Position, GameObject
 from typing import Dict, List, Optional, TypedDict, Any
 import math
+import random
+
 
 def dist_squared_to(a: Position, b: Position) -> float:
     # Use dot notation to access attributes of Position

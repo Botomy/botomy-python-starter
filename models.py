@@ -32,12 +32,12 @@ class GameObject(BaseModel):
 
 class Item(GameObject):
     value: Optional[float] = None  # Make value optional with a default value
-    points: int
+    points: float
     power: Optional[PowerUpType] = None  # Make power optional with a default value
     health: Optional[float] = None
 
 class Character(GameObject):
-    attack_damage: int
+    attack_damage: float
     direction: Direction
     health: float
     max_health: float
@@ -45,7 +45,7 @@ class Character(GameObject):
     is_frozen: bool
     is_pushed: bool
     is_zapped: bool
-    points: int
+    points: float
 
 class Enemy(Character):
     pass
@@ -70,7 +70,7 @@ class Player(Character):
     display_name: str
     is_dashing: bool
     levelling: Levelling
-    score: int
+    score: float
     shield_raised: bool
     special_equipped: str
     speech: str
@@ -88,11 +88,11 @@ class OwnPlayer(Player):
     is_shield_ready: bool
     is_special_ready: bool
     is_zap_ready: bool
-    overclock_duration: int
+    overclock_duration: float
 
 class Hazard(GameObject):
     status: HazardStatus
-    attack_damage: int
+    attack_damage: float
     owner_id: str
 
 class GameInfo(BaseModel):
@@ -101,8 +101,8 @@ class GameInfo(BaseModel):
     map: str
     match_id: str
     state: GameState
-    time_remaining_s: int
-    latency: int
+    time_remaining_s: float
+    latency: float
 
 class PlayerStat(BaseModel):
     id: str

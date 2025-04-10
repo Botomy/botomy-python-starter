@@ -5,8 +5,8 @@ from models import LevelData  # Import LevelData from models
 app = FastAPI()
 
 @app.post("/")
-async def post(level_data: LevelData):
-    return play(level_data)
+async def post(request: LevelData):
+    return play(request)
 
 # Run the application with uvicorn
 if __name__ == "__main__":
