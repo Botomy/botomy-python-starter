@@ -33,6 +33,10 @@ Modify the `play` function in `play.py` to write your bot code.
 
 4. Access the application at `http://127.0.0.1:3000`.
 
+## Example bot
+
+You can find a sample bot in `example_bot.py`
+
 ## License
 
 This project is licensed under the MIT License.
