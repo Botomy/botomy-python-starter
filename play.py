@@ -13,7 +13,7 @@ def play(level_data: LevelData) -> List[Move]:
 
     moves.append({
       "debug_info": {
-          "message": "oh hai"
+          "message": "Congratulations! You have reached the play function. Modify this (play.py) to implement your bot's logic. Try adding move_to: {x,y} to your move array",
       }
     })
     return moves
