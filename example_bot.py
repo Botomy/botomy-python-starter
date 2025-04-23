@@ -4,16 +4,16 @@ import math
 import random
 
 
-def dist_squared_to(a: Position, b: Position) -> float:
+def dist_to(a: Position, b: Position) -> float:
     # Use dot notation to access attributes of Position
-    return pow(a.x - b.x, 2) + pow(a.y - b.y, 2)
+    return math.sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2))
 
 def get_closest_item(position: Position, items: List[GameObject]) -> Optional[GameObject]:
     min_dist = float('inf')
     target = None
 
     for item in items:
-        dist = dist_squared_to(position, item.position)
+        dist = dist_to(position, item.position)
         if dist < min_dist:
             min_dist = dist
             target = item
@@ -34,7 +34,7 @@ def play(level_data: LevelData) -> List[Move]:
 
     if target:
         if target.health != None:
-            if dist_squared_to(own_player.position, target.position) < 15625:
+            if dist_to(own_player.position, target.position) < 125:
                 moves.append("attack")
                 moves.append("shield")
         moves.append({"move_to": target.position})
