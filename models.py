@@ -62,9 +62,9 @@ class Levelling(BaseModel):
     health: int = 0
 
 class ItemInventory(BaseModel):
-    big_potions: List[dict]
-    speed_zappers: List[dict]
-    rings: List[dict]
+    big_potions: int
+    speed_zappers: int
+    rings: int
 
 class Player(Character):
     display_name: str
