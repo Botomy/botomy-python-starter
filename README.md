@@ -37,7 +37,7 @@ Modify the `play` function in `play.py` to write your bot code.
 
 ## Wiki and level data
 
-https://brokkli-labs.github.io/Botomy/docs/game-play/level-data
+https://botomy.github.io/Botomy/docs/level-data
 
 ## Example bot
 
